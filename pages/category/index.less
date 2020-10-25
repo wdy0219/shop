@@ -1,0 +1,51 @@
+page {
+  height: 100%;
+}
+
+.cates {
+  height: 100%;
+  .cates-container {
+    height: ~"calc(100vh - 90rpx)";
+    display: flex;
+    .left-menu {
+      flex: 2;
+      .menu-item {
+        height: 80rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30rpx;
+      }
+      .active {
+        color: var(--themeColor);
+        border-left: 5rpx solid currentColor;
+      }
+    }
+    .right-content {
+      flex: 5;
+      padding: 50rpx;
+      .box {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-right: 30rpx;
+        .goods {
+            width: 200rpx;
+            height: 300rpx;
+            image {
+                width: 160rpx;
+                height: 160rpx;
+            }
+            view {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 160rpx;
+                
+            }
+        }
+      }
+    }
+  }
+}

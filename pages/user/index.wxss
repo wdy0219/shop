@@ -1,0 +1,110 @@
+page {
+  background-color: #edece8;
+}
+.user-info {
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user-info .user-img {
+  position: relative;
+}
+.user-info .user-img .bg {
+  width: 100vw;
+  height: 50vh;
+  filter: blur(10rpx);
+}
+.user-info .user-img .user-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user-info .user-img .user-name .user-icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user-info .user-img .user-name .name {
+  color: #000;
+  margin-top: 40rpx;
+}
+.user-info .user-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  border: 1rpx solid greenyellow;
+  color: greenyellow;
+  font-size: 38rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+}
+.user-content {
+  position: relative;
+}
+.user-content .main {
+  padding-bottom: 100rpx;
+  color: #666;
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+.user-content .main .history {
+  background-color: #fff;
+  display: flex;
+}
+.user-content .main .history navigator {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.user-content .main .history navigator .num {
+  color: var(--themeColor);
+}
+.user-content .main .orders {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+.user-content .main .orders .orders-title {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.user-content .main .orders .orders-content {
+  display: flex;
+}
+.user-content .main .orders .orders-content navigator {
+  padding: 15rpx 0;
+  flex: 1;
+  text-align: center;
+}
+.user-content .main .orders .orders-content navigator .iconfont {
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.user-content .main .address {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.user-content .main .app-info {
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.user-content .main .app-info .info-item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.user-content .main .app-info .info-contact {
+  display: flex;
+  justify-content: space-between;
+}
+.user-content .main .recommend {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}

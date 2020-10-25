@@ -1,0 +1,48 @@
+<view class="pyg-index">
+    <!-- 搜索框 -->
+    <SearchInput></SearchInput>
+    <!-- 轮播图 -->
+    <view class="index-swiper">
+        <swiper autoplay indicator-dots circular>
+            <swiper-item 
+            wx:for="{{swiperList}}"
+            wx:key="id">
+                <navigator>
+                    <image mode="widthFix" src="{{item.picUrl}}"></image>
+                </navigator>
+            </swiper-item>             
+        </swiper>
+    </view>
+    <!-- 分类导航 -->
+    <view class="index-cate">
+        <navigator
+        wx:for="{{catesList}}"
+        wx:key="id"
+        url="/pages/category/index" open-type="switchTab">
+            <image src="{{item.icon}}" mode="widthFix"></image>
+            <view>{{item.name}}</view>
+        </navigator>
+    </view>
+    <!-- 楼层 -->
+    <view class="index-floor">
+        <view class="floor-title">
+            <view>—————— 商品列表 ——————</view>
+        </view>
+        <view class="floor-container">
+            <navigator
+            wx:for="{{floorList}}"
+            wx:key="id"
+            url="/pages/goods_detail/index?id={{item.id}}">
+                <view class="goods-img">
+                    <image src="{{item.pic}}" mode="aspectFill"></image>
+                </view>
+                <view class="goods-name">{{item.name}}</view>
+                <view class="goods-price">
+                    <view class="new">￥ {{item.minPrice}}</view>
+                    <view class="old">￥ {{item.originalPrice}}</view>
+                </view>
+                <view></view>
+            </navigator>
+        </view>
+    </view>
+</view>

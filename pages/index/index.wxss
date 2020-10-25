@@ -1,0 +1,86 @@
+.index-swiper swiper {
+  width: 750rpx;
+  height: 180rpx;
+}
+.index-swiper swiper image {
+  width: 100%;
+}
+.index-cate {
+  display: flex;
+  width: 750rpx;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.index-cate navigator {
+  width: 150rpx;
+  height: 160rpx;
+  text-align: center;
+}
+.index-cate navigator image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.index-cate navigator view {
+  width: 100%;
+  height: 30rpx;
+  font-size: 24rpx;
+}
+.index-floor {
+  margin-top: 20rpx;
+}
+.index-floor .floor-title {
+  width: 100%;
+  height: 40rpx;
+  margin: 20rpx;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+.index-floor .floor-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 25rpx;
+  background-color: #F2f2f2;
+}
+.index-floor .floor-container navigator {
+  width: 330rpx;
+  height: 472rpx;
+  background-color: #fff;
+  margin-bottom: 24rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+.index-floor .floor-container navigator .goods-img {
+  width: 330rpx;
+  height: 330rpx;
+  overflow: hidden;
+}
+.index-floor .floor-container navigator .goods-img image {
+  width: 330rpx;
+  height: 330rpx;
+}
+.index-floor .floor-container navigator .goods-name {
+  width: 100%;
+  margin: 10rpx 0;
+  text-indent: 0.5rem;
+}
+.index-floor .floor-container navigator .goods-price {
+  width: 100%;
+  height: 30rpx;
+  margin: 10prx 10rpx 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.index-floor .floor-container navigator .goods-price .new {
+  float: left;
+  width: 100rpx;
+  color: #e64340;
+  text-indent: 0.5rem;
+}
+.index-floor .floor-container navigator .goods-price .old {
+  float: right;
+  width: 100rpx;
+  color: #aaa;
+  text-decoration: line-through;
+}

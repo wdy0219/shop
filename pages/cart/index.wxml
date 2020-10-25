@@ -1,0 +1,65 @@
+<!-- 收货地址 -->
+<view class="revice-address-row">
+    <view class="address-btn" wx:if="{{!address.userName}}">
+        <button bindtap="handleChooseAddress" type="primary" plain>获取收货地址</button>
+    </view>
+    <view wx:else class="user-info-row">
+        <view class="user-info">
+            <view>{{address.userName}}</view>
+            <view>{{address.all}}</view>
+        </view>
+        <view class="user-phone">{{address.telNumber}}</view>
+    </view>
+</view>
+
+<!-- 购物车内容 -->
+<view class="cart-content">
+    <view class="cart-title">购物车</view>
+    <view class="cart-main">
+        <block wx:if="{{cart.length !== 0}}">
+            <view class="cart-item"
+            wx:for="{{cart}}"
+            wx:key="id">
+                <view class="item-checkbox">
+                    <checkbox-group bindchange="handleItemChange" data-id="{{item.basicInfo.id}}">
+                        <checkbox checked="{{item.checked}}"></checkbox>
+                    </checkbox-group>
+                </view>
+                <navgator class="item-img">
+                    <image src="{{item.basicInfo.pic}}" mode="widthFix"></image>
+                </navgator>
+                <view class="item-info">
+                    <view class="goods-name">{{item.basicInfo.name}}</view>
+                    <view class="goods-price">
+                        <view class="price">￥{{item.basicInfo.minPrice}}</view>
+                        <view class="num-tool">
+                            <view class="num-edit" bindtap="handleItemNumEdit" data-id="{{item.basicInfo.id}}" data-operation="{{-1}}">-</view>
+                            <view class="num">{{item.num}}</view>
+                            <view class="num-edit" bindtap="handleItemNumEdit" data-id="{{item.basicInfo.id}}" data-operation="{{1}}">+</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>还没有选购商品</block>
+    </view>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="footer-tool">
+    <view class="all-checkbox">
+      <checkbox-group bindchange="handleItemAllCheck">
+        <checkbox checked="{{allChecked}}">全选</checkbox>
+      </checkbox-group>
+    </view>
+    <view class="total-price">
+      <view class="price">
+        合计: <text class="price-text">￥{{totalPrice}}</text>
+      </view>
+      <view>包含运费</view>
+    </view>
+    <!-- 结算 -->
+    <view class="order-pay" bindtap="handlePay" >
+      结算({{totalNum}})
+    </view>
+  </view>

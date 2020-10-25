@@ -1,0 +1,32 @@
+<!-- "categoryId": 174505,上装
+"categoryId": 174513,袜子
+"categoryId": 174514,鞋子
+"categoryId": 174510,外套
+"categoryId": 174511,秒杀
+"categoryId": 174507,特价区 -->
+<view class="cates">
+    <SearchInput></SearchInput>
+
+    <view class="cates-container">
+        <scroll-view class="left-menu" scroll-y>
+            <view class="menu-item {{index == currentIndex ? 'active' : ''}}"
+            wx:for="{{leftMenuList}}"
+            wx:key="id"
+            bindtap="handleItemTap"
+            data-index="{{index}}"
+            data-id="{{item.id}}">
+                {{item.name}}
+            </view>
+        </scroll-view>
+        <scroll-view class="right-content" scroll-y>
+            <view class="box">
+                <navigator class="goods" url="/pages/goods_detail/index?id={{item.id}}"
+                wx:for="{{rightCurrentContent}}"
+                wx:key="id">
+                    <image src="{{item.pic}}" mode="scaleToFill"></image>
+                    <view>{{item.name}}</view>
+                </navigator>
+            </view>
+        </scroll-view>
+    </view>
+</view>
